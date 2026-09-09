@@ -401,7 +401,7 @@ class FMB(nn.Module):
 
 
 @ARCH_REGISTRY.register()
-class SMFANet(nn.Module):
+class MAAN(nn.Module):
     def __init__(self, dim=36, n_blocks=8, ffn_scale=2, upscaling_factor=4):
         super().__init__()
         self.nlsa = NonLocalSparseAttention(n_hashes=4, channels=36, k_size=3, reduction=4, chunk_size=144, conv=default_conv, res_scale=1)
